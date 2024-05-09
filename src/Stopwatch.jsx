@@ -33,18 +33,23 @@ function Stopwatch() {
    }, [flag])
 
 
-
+   const stopwatchStyle ={
+    border: "1px solid black",
+    width: "50%",
+    padding:"20px",
+    borderRadius: "10px",
+    margin: "auto"
+   }
    
 
   return (
-    <div>
+    <div style={stopwatchStyle}>
         <h3>Stopwatch</h3>
-        <p>{formatTime(time)}</p>
+        <p>Time {formatTime(time)}</p>
         <div>
             <button onClick={() => handleTime()}>{!flag ? "start" : "stop"}</button>
             <button onClick={() => handleReset()}>Reset</button>
         </div>
-
     </div>
   )
 }
