@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
 function Stopwatch() {
-    const [time,setTime] = useState(10);
+    const [time,setTime] = useState(0);
     const [flag,setFlag] = useState(false)
 
     function handleTime(){
@@ -10,6 +10,7 @@ function Stopwatch() {
 
     function handleReset(){
         setFlag(false)
+        setTime(0)
     }
     
     function formatTime(seconds){
@@ -26,7 +27,7 @@ function Stopwatch() {
         },1000)
     } else {
         clearInterval(timeId)
-        setTime(0)
+        // setTime(0)
     }
    
     return () => clearInterval(timeId)
