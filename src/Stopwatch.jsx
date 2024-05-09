@@ -48,8 +48,8 @@ function Stopwatch() {
         <h3>Stopwatch</h3>
         <p>Time {formatTime(time)}</p>
         <div>
-            <button onClick={() => handleTime()}>{!flag ? "start" : "stop"}</button>
-            <button onClick={() => handleReset()}>Reset</button>
+            <button type='button' onClick={() => handleTime()}>{!flag ? "Start" : "Stop"}</button>
+            <button type='button' onClick={() => handleReset()}>Reset</button>
         </div>
     </div>
   )
