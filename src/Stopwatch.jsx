@@ -32,20 +32,11 @@ function Stopwatch() {
    
     return () => clearInterval(timeId)
    }, [flag])
-
-
-   const stopwatchStyle ={
-    border: "1px solid black",
-    width: "50%",
-    padding:"20px",
-    borderRadius: "10px",
-    margin: "auto"
-   }
    
 
   return (
-    <div style={stopwatchStyle}>
-        <h3>Stopwatch</h3>
+    <div>
+        <h1>Stopwatch</h1>
         <p>Time {formatTime(time)}</p>
         <div>
             <button type='button' onClick={() => handleTime()}>{!flag ? "Start" : "Stop"}</button>
