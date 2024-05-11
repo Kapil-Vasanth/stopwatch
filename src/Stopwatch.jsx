@@ -24,7 +24,7 @@ function Stopwatch() {
     if(flag){
         timeId = setInterval(() => {
             setTime(prev => prev + 1)
-        },1000)
+        },100)
     } else {
         clearInterval(timeId)
         // setTime(0)
@@ -37,7 +37,7 @@ function Stopwatch() {
   return (
     <div>
         <h1>Stopwatch</h1>
-        <p>Time {formatTime(time)}</p>
+        <p>Time: {formatTime(time)}</p>
         <div>
             <button type='button' onClick={() => handleTime()}>{!flag ? "Start" : "Stop"}</button>
             <button type='button' onClick={() => handleReset()}>Reset</button>
