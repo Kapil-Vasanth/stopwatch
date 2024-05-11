@@ -24,7 +24,7 @@ function Stopwatch() {
     if(flag){
         timeId = setInterval(() => {
             setTime(prev => prev + 1)
-        },100)
+        },1000)
     } else {
         clearInterval(timeId)
         // setTime(0)
